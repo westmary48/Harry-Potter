@@ -23,11 +23,11 @@ const printToDom = (stringToPrint, whereToPrint) => {
 const sortCard = () => {
     newString = `<div class="d-flex justify-content-center">
 <form class="text-light bg-secondary w-50 p-3">
-    <div class="form-group">
-        <h2>Enter First Year's Name</h2>
-        <label for="studentInput">Student</label>
-        <input type="text" class="form-control" id="studentInput" placeholder="Enter Name">
-    <button type="submit" id="sortButton" class="btn btn-primary btn-pull-right w-25">Sort</button>
+    <h2>Enter First Year's Name</h2>
+    <div class="form-group d-flex flex-row">
+        <label for="studentInput m-top w-33">Student</label>
+        <input type="text" class="form-control w-20 p-3 m-3" id="studentInput" placeholder="Enter Name">
+    <button type="submit" id="sortButton" class="btn btn-primary w-30">Sort</button>
     </div>
 </form>
 </div>`;
