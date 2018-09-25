@@ -18,8 +18,8 @@ const activateDeletes = () => {
 
 const printToDom = (stringToPrint, whereToPrint) => {
     document.getElementById(whereToPrint).innerHTML += stringToPrint;
-
 }
+
 const sortCard = () => {
     newString = `<div class="d-flex justify-content-center">
 <form class="text-light bg-secondary w-50 p-3">
@@ -28,7 +28,7 @@ const sortCard = () => {
         <label for="studentInput">Student</label>
         <input type="text" class="form-control" id="studentInput" placeholder="Enter Name">
     </div>
-    <button type="submit" id="sortButton" class="btn btn-primary w-100">Sort</button>
+    <button type="submit" id="sortButton" class="btn btn-primary w-50">Sort</button>
 </form>
 </div>`;
 
@@ -48,13 +48,14 @@ const buildNewStudentCard = (sort) => {
     activateDeletes();
 }
 
-document.getElementById('firstButton').addEventListener('click', function() {
+document.getElementById('firstButton').addEventListener('click', function (e) {
+    e.preventDefault()
     sortCard();
 });
-document.getElementById('letsGetStarted').addEventListener('click', function() {
-    if(event.target.id === 'sortButton') {
+document.getElementById('letsGetStarted').addEventListener('click', function (e) {
+    e.preventDefault()
+    if (e.target.id === 'sortButton') {
         let nameInput = document.getElementById("studentInput");
-    buildNewStudentCard(nameInput.value)
-
+        buildNewStudentCard(studentInput.value)
     }
-})
+});
