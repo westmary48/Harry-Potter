@@ -27,8 +27,8 @@ const sortCard = () => {
         <h2>Enter First Year's Name</h2>
         <label for="studentInput">Student</label>
         <input type="text" class="form-control" id="studentInput" placeholder="Enter Name">
+    <button type="submit" id="sortButton" class="btn btn-primary btn-pull-right w-25">Sort</button>
     </div>
-    <button type="submit" id="sortButton" class="btn btn-primary w-50">Sort</button>
 </form>
 </div>`;
 
@@ -40,7 +40,7 @@ const buildNewStudentCard = (sort) => {
         <div class ="card-body">
         <h5 class="card-title">${sort}</h5>
         <p> Your new house is... ${house[newHouse]}</p>
-        <button href="#" class="btn btn-danger deleteButton">Delete!</button>
+        <button href="#" class="btn btn-danger deleteButton">Expel!</button>
       </div>
       </div>`;
 
